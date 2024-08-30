@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar{
+    @apply hidden
+}
+
+
+/* Add this CSS in your global stylesheet or in the component */
+.toggle-checkbox {
+    width: 40px;
+    height: 20px;
+    appearance: none;
+    background-color: #4B5563; /* Tailwind gray-600 */
+    border-radius: 9999px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s ease;
+  }
+  
+  .toggle-checkbox:checked {
+    background-color: #1D4ED8; /* Tailwind blue-700 */
+  }
+  
+  .toggle-checkbox::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+  }
+  
+  .toggle-checkbox:checked::before {
+    transform: translateX(20px);
+  }
